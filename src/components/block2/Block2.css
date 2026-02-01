@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+.dblock {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px;
+  align-items: end;
+
+  .dimg {
+    img {
+      width: 460px;
+    }
+  }
+  .dh1p {
+    margin-left: 160px;
+    h1 {
+      font-family: Manrope;
+    }
+    p {
+      font-weight: lighter;
+      margin-top: 20px;
+      font-family: sans-serif;
+      color: #3d352d;
+    }
+  }
+}
