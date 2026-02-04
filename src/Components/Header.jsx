@@ -31,12 +31,12 @@ function Header() {
   const underlineColor = 'bg-[#D9B46C]';
 
   return (
-    <header className={`fixed flex items-center justify-between px-12 md:px-16 lg:px-20 top-0 h-20 w-full border-0 bg-background/95 backdrop-blur z-50 transition-colors duration-500 ${textColor}`}>
+    <header className={`fixed flex items-center justify-between px-12 md:px-16 lg:px-20 top-0 h-20 w-full border-0 bg-background/95 backdrop-blur-sm z-50 transition-colors duration-300 ${textColor}`}>
       
       <img 
         src="/logo.svg" 
         alt="logo" 
-        className={`w-40 transition-all duration-500 ${isDarkSection ? 'brightness-0 invert' : ''}`} 
+        className={`w-40`} 
       />
 
       <nav>
@@ -51,7 +51,7 @@ function Header() {
             >
               {item}
               {/* Полоска (Underline) */}
-              <span className={`absolute bottom-0 left-0 h-[2px] transition-all duration-300 ${underlineColor}
+              <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${underlineColor}
                 ${activeItem === item ? 'w-full' : 'w-0 group-hover:w-full'}
               `}></span>
             </li>
@@ -61,13 +61,13 @@ function Header() {
 
       <div className="flex gap-2">
         <a href='#' className='flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all'>
-          <ShoppingCart className='w-5 h-5'/>
+          <ShoppingCart className='w-6 h-6'/>
         </a>
         <a href="#" className='flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all'>
-          <Heart className='w-5 h-5'/>
+          <Heart className='w-6 h-6'/>
         </a>
         <a href="#" className='flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all'>
-          <Phone className='w-5 h-5'/>
+          <Phone className='w-6 h-6'/>
         </a>
       </div>
     </header>

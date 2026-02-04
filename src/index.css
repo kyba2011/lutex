@@ -1,6 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
 @import "tailwindcss";
 
 @theme {
   --color-teal-dark: #0B5158;
   --color-teal-light: #10545B;
+}
+
+*{
+  font-family: Manrope;
 }
