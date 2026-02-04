@@ -3,7 +3,7 @@ import "./Block2.css";
 
 function Block2() {
   return (
-    <div className="dblock">
+    <div data-bg='white' className="dblock">
       <div className="dimg">
         <img src="/img.png" alt="ww" />
       </div>

@@ -1,8 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
 .dblock {
   display: flex;
   justify-content: space-between;
-  margin: 60px;
+  margin: 100px 80px 100px 80px;
   align-items: end;
 
   .dimg {
@@ -12,14 +11,21 @@
   }
   .dh1p {
     margin-left: 160px;
+    color: #3d352d;
+
     h1 {
-      font-family: Manrope;
+      font-family: "Manrope";
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      
     }
     p {
       font-weight: lighter;
-      margin-top: 20px;
+      margin-top: 28px;
+      font-size: 20px;
       font-family: sans-serif;
-      color: #3d352d;
+      line-height: 28px;  
     }
   }
 }
