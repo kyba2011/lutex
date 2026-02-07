@@ -14,7 +14,7 @@ function Hero() {
           </p>
         </div>
         <div className="flex justify-between">
-          <div className="relative bg-white flex items-center justify-between max-w-157.5 w-full h-50 p-7.5 pr-26">
+          <div className="relative bg-white flex items-center rounded-[10px] justify-between max-w-157.5 w-full h-50 p-7.5 pr-26">
             <img src="/hero-iimg.png" alt="" className="w-67.5 h-35 " />
             <p className="text-[22px] w-36 font-normal">Постельное белье</p>
 
@@ -23,7 +23,7 @@ function Hero() {
             </a>
 
           </div>
-          <div className="relative bg-white flex items-center justify-between max-w-157.5 w-full h-50 p-7.5 pr-26">
+          <div className="relative bg-white flex items-center rounded-[10px] justify-between max-w-157.5 w-full h-50 p-7.5 pr-26">
             <img src="/hero-img.png" alt="" className="w-67.5 h-35 " />
             <p className="text-[22px] w-36 font-normal">Трикотаж</p>
             <a href="" className="absolute flex w-12.5 h-12.5 pt-0.5 rounded-full bg-teal-dark justify-center items-center bottom-7.5 right-7.5">
