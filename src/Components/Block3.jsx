@@ -1,41 +1,55 @@
+import { useState } from "react";
 import Card from "./card";
 
 function Block3() {
+  const [selectedMaterial, setSelectedMaterial] = useState("Все");
+
   const api = [
-    { id: 1, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 2, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 3, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 4, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 5, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 6, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 7, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 8, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 9, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 10, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 11, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
-    { id: 12, name: "poplin", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Поплин", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Хлопок", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Сатин", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Бязь", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Лён", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Поплин", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Хлопок", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Сатин", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Бязь", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Лён", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Поплин", name2: "zima", visit: ["1sp", "2sp", "euro"] },
+    { name: "Хлопок", name2: "zima", visit: ["1sp", "2sp", "euro"] },
   ];
 
+  const materials = ["Все", "Поплин", "Хлопок", "Сатин", "Бязь", "Лён"];
+
+  const filteredApi =
+    selectedMaterial === "Все"
+      ? api
+      : api.filter((item) => item.name === selectedMaterial);
+
   return (
-    <div
-      data-bg="white"
-      data-header-theme="light"
-      className="w-ful py-16"
-    >
+    <div data-bg="white" data-header-theme="light" className="w-ful py-16">
       <h1 className="text-5xl text-teal-light font-semibold text-center mb-10">
         УЮТНАЯ СПАЛЬНЯ
       </h1>
       <div className="flex justify-center space-x-6 my-10 leading-3.25 text-[16px] text-teal-light font-semibold">
-        <p>-Поплин</p>
-        <p>-Хлопок</p>
-        <p>-Сатин</p>
-        <p>-Бязь</p>
-        <p>-Лён</p>
+        {materials.map((material) => (
+          <p
+            key={material}
+            onClick={() => setSelectedMaterial(material)}
+            className={`cursor-pointer transition-colors ${
+              selectedMaterial === material
+                ? "text-[#D9B46C]"
+                : "hover:text-[#D9B46C]"
+            }`}
+          >
+            -{material}
+          </p>
+        ))}
       </div>
       <div className=" py-16 px-20">
-        <div className="flex flex-wrap gap-6 justify-center">
-          {api.map((item) => (
-            <Card key={item.id} data={item} />
+        <div className="flex flex-wrap gap-6 justify-start">
+          {filteredApi.map((item, index) => (
+            <Card key={index} data={item} img="/card-img.png" />
           ))}
         </div>
       </div>
