@@ -37,7 +37,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed flex items-center justify-between px-12 md:px-16 lg:px-20 top-0 h-20 w-full border-0 bg-background/95 backdrop-blur-[20px] z-50 transition-colors duration-300 ${textColor}`}
+      className={`fixed flex items-center justify-between px-12 md:px-16 lg:px-20 top-0 h-20 max-w-[1440px] w-full border-0 bg-background/95 backdrop-blur-[20px] z-50 transition-colors duration-300 ${textColor}`}
     >
       <img src="/logo.svg" alt="logo" className={`w-40`} />
 

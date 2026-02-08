@@ -1,10 +1,10 @@
 import { Heart, ShoppingCart } from "lucide-react";
 
-function Card({ data }) {
+function Card({ data, img = "/card-img.png" }) {
   return (
     <a href="">
-      <div className="max-w-100 xl:max-w-102.5 w-full rounded-[10px] pb-2 p-px text-[#3E3232] bg-white ">
-        <img src="/card-img.png" alt="" className="w-full rounded-t-[10px]" />
+      <div className="max-w-90 xl:max-w-95 2xl:max-w-102.5 w-full rounded-[10px] pb-2 p-px text-[#3E3232] bg-white ">
+        <img src={img} alt="" className="w-full rounded-t-[10px]" />
         <div className="flex justify-between w-full items-center pl-1.5 p-4">
           <h3 className="text-[22px] font-bold">{data.name}</h3>
           <p className="text-[16px] font-normal">{data.name2}</p>
