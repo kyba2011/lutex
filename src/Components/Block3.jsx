@@ -46,7 +46,7 @@ function Block3() {
           </p>
         ))}
       </div>
-      <div className=" py-16 px-20">
+      <div className="flex justify-center py-16 px-20">
         <div className="flex flex-wrap gap-6 justify-start">
           {filteredApi.map((item, index) => (
             <Card key={index} data={item} img="/card-img.png" />
