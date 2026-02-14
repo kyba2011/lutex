@@ -31,7 +31,7 @@ function Sale() {
     },
   ];
   return (
-    <div className="divul">
+    <div data-bg='white' className="divul">
       <ul>
         <li>
           <a href="/">Главная</a>
@@ -41,7 +41,7 @@ function Sale() {
       </ul>
 
       <div className="sale-content">
-        <div className="sale-grid ">
+        <div data-bg='dark' className="sale-grid ">
           {api.map((item) => (
             <Card key={item.id} data={item} />
           ))}
