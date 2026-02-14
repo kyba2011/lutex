@@ -42,7 +42,7 @@ function Block3() {
                 : "hover:text-[#D9B46C]"
             }`}
           >
-            -{material}
+            - {material}
           </p>
         ))}
       </div>
