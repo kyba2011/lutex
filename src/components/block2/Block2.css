@@ -9,6 +9,7 @@
       width: 460px;
     }
   }
+
   .dh1p {
     margin-left: 160px;
     color: #3d352d;
@@ -18,14 +19,15 @@
       font-weight: bold;
       font-size: 24px;
       line-height: 32px;
-      
+
     }
+
     p {
       font-weight: lighter;
       margin-top: 28px;
       font-size: 20px;
       font-family: sans-serif;
-      line-height: 28px;  
+      line-height: 28px;
     }
   }
 }
