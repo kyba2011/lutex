@@ -4,6 +4,8 @@ import Block3 from "./Block3";
 import Block4 from "./Block4";
 import Block5 from "./Block5";
 import Block7 from "./Block7/Block7";
+import Block6 from "./Block6";
+import Block8 from "./Block8";
 
 function Home() {
   return (
@@ -13,7 +15,9 @@ function Home() {
       <Block3 />
       <Block4 />
       <Block5 />
+      <Block6 />
       <Block7 />  
+      <Block8 />
     </div>
   );
 }
