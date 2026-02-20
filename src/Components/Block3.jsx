@@ -65,6 +65,7 @@ function Block3() {
       visit: ["1sp", "2sp", "euro"],
       img: "/card-img.png",
     },
+    
     {
       name: "Поплин",
       name2: "zima",
@@ -98,8 +99,7 @@ function Block3() {
     <div
       id="catalog"
       data-bg="white"
-      data-header-theme="light"
-      className="w-full max-w-[1440px] mx-auto py-12 lg:py-16"
+      className="w-full max-w-360 mx-auto py-12 lg:py-16"
     >
       <h1 className="text-3xl lg:text-4xl xl:text-5xl text-teal-light font-semibold text-center mb-8 lg:mb-10 px-4">
         УЮТНАЯ СПАЛЬНЯ

@@ -55,13 +55,14 @@ function Header() {
           const bgType = section.getAttribute("data-bg");
           setIsDarkSection(bgType === "dark");
 
-          // Обновляем активный пункт меню в зависимости от секции
-          const sectionId = section.getAttribute("id");
-          if (sectionId === "catalog") {
-            setActiveItem("КАТАЛОГ");
-          } else if (scrollY < 200) {
-            // Если в самом верху страницы
-            setActiveItem("ГЛАВНАЯ");
+          // Обновляем активный пункт меню ТОЛЬКО на главной странице
+          if (location.pathname === "/") {
+            const sectionId = section.getAttribute("id");
+            if (sectionId === "catalog") {
+              setActiveItem("КАТАЛОГ");
+            } else {
+              setActiveItem("ГЛАВНАЯ");
+            }
           }
         }
       });
@@ -71,7 +72,7 @@ function Header() {
     window.addEventListener("scroll", updateHeaderColor);
 
     return () => window.removeEventListener("scroll", updateHeaderColor);
-  }, []);
+  }, [location.pathname]);
 
   // Обновляем активный пункт при изменении пути
   useEffect(() => {
