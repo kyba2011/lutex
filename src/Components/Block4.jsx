@@ -1,8 +1,7 @@
 import { useCallback } from "react";
-import { ChevronLeft, ChevronRight, MoveLeft, MoveRight } from "lucide-react";
+import { MoveLeft, MoveRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Card from "./card";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 function Block4() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -15,20 +14,23 @@ function Block4() {
     {
       name: "poplin",
       name2: "zima",
-      visit: [40, 42, 44, 48, 50, 52, 54],
+      visit: ["40", "42 -nh", "44 -nh", "48-nh", "50", "52-nh", "54-nh"],
       have: 3,
+      img: "/card-img.png",
     },
     {
       name: "poplin",
       name2: "zima",
-      visit: [40, 42, 44, 48, 50, 52, 54],
+      visit: ["40", "42", "44", "48", "50 -nh", "52", "54"],
       have: 5,
+      img: "/card-img.png",
     },
     {
       name: "poplin",
       name2: "zima",
-      visit: [40, 42, 44, 48, 50, 52, 54],
+      visit: ["40 -nh", "42", "44", "48", "50 -nh", "52", "54"],
       have: 2,
+      img: "/card-img.png",
     },
   ];
 
@@ -53,10 +55,10 @@ function Block4() {
               {api.map((item, index) => (
                 <div key={index} className="pl-6 shrink-0 basis-1/2">
                   <div className="relative">
-                    <div className="absolute top-4.25 right-15.75 w-6 h-5.5 rotate-12 -z-10 bg-[#D9B46C]"></div>
-                    <Card data={item} img="/card-img.png" /> 
+                    <div className="absolute top-4.25 right-21.75 w-6 h-5.5 rotate-12 -z-10 bg-[#D9B46C]"></div>
+                    <Card data={item} />
 
-                    <div className="absolute top-5 right-15 tracking-[-5%] leading-[120%] font-[Inter] bg-[#D9B46C] text-white pl-4.75 pr-3.25 py-2.75 text-[26px] font-medium shadow-2xl">
+                    <div className="absolute top-5 right-21 tracking-[-5%] leading-[120%] font-[Inter] bg-[#D9B46C] text-white pl-4.75 pr-3.25 py-2.75 text-[26px] font-medium shadow-2xl">
                       Осталось {item.have} товара
                     </div>
                   </div>
