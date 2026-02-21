@@ -1,84 +1,9 @@
 import { useState } from "react";
 import Card from "./card";
+import { products } from "../data/products";
 
 function Block3() {
   const [selectedMaterial, setSelectedMaterial] = useState(null);
-
-  const api = [
-    {
-      name: "Поплин",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Хлопок",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Сатин",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Бязь",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Лён",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Поплин",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Хлопок",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Сатин",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Бязь",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Лён",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    
-    {
-      name: "Поплин",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-    {
-      name: "Хлопок",
-      name2: "zima",
-      visit: ["1sp", "2sp", "euro"],
-      img: "/card-img.png",
-    },
-  ];
 
   const materials = ["Поплин", "Хлопок", "Сатин", "Бязь", "Лён"];
 
@@ -90,10 +15,10 @@ function Block3() {
     }
   };
 
-  const filteredApi =
+  const filteredProducts =
     selectedMaterial === null
-      ? api
-      : api.filter((item) => item.name === selectedMaterial);
+      ? products
+      : products.filter((item) => item.material === selectedMaterial);
 
   return (
     <div
@@ -120,9 +45,12 @@ function Block3() {
         ))}
       </div>
       <div className="flex justify-center py-12 lg:py-16 px-4 lg:px-8 xl:px-20">
-        <div className="flex flex-wrap gap-4 lg:gap-5 xl:gap-6 justify-center lg:justify-start max-w-full">
-          {filteredApi.map((item, index) => (
-            <Card key={index} data={item} />
+        <div
+          data-bg="dark"
+          className="flex flex-wrap gap-4 lg:gap-5 xl:gap-6 justify-center lg:justify-start max-w-full"
+        >
+          {filteredProducts.map((item) => (
+            <Card key={item.id} id={item.id} />
           ))}
         </div>
       </div>
