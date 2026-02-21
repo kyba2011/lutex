@@ -4,7 +4,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Header() {
   const [isDarkSection, setIsDarkSection] = useState(false);
-  // Состояние для активного пункта меню (по умолчанию 'ГЛАВНАЯ')
   const [activeItem, setActiveItem] = useState("ГЛАВНАЯ");
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,9 +21,7 @@ function Header() {
 
     if (item.scrollTo) {
       if (location.pathname !== "/") {
-        // Если не на главной странице, сначала переходим на главную
         navigate("/");
-        // Ждем немного, чтобы страница загрузилась, затем скроллим
         setTimeout(() => {
           const element = document.getElementById(item.scrollTo);
           if (element) {
@@ -32,7 +29,6 @@ function Header() {
           }
         }, 100);
       } else {
-        // Если уже на главной, просто скроллим
         const element = document.getElementById(item.scrollTo);
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -55,7 +51,6 @@ function Header() {
           const bgType = section.getAttribute("data-bg");
           setIsDarkSection(bgType === "dark");
 
-          // Обновляем активный пункт меню ТОЛЬКО на главной странице
           if (location.pathname === "/") {
             const sectionId = section.getAttribute("id");
             if (sectionId === "catalog") {
@@ -74,7 +69,6 @@ function Header() {
     return () => window.removeEventListener("scroll", updateHeaderColor);
   }, [location.pathname]);
 
-  // Обновляем активный пункт при изменении пути
   useEffect(() => {
     if (location.pathname === "/") {
       setActiveItem("ГЛАВНАЯ");
@@ -84,11 +78,12 @@ function Header() {
       setActiveItem("ОТЗЫВЫ");
     } else if (location.pathname === "/contacts") {
       setActiveItem("КОНТАКТЫ");
+    } else {
+      setActiveItem("");
     }
   }, [location.pathname]);
 
   const textColor = isDarkSection ? "text-white" : "text-[#10545B]";
-  // Цвет полоски (золотой, как твои кнопки)
   const underlineColor = "bg-[#D9B46C]";
 
   return (
@@ -113,7 +108,6 @@ function Header() {
               ) : (
                 <Link to={item.path}>{item.label}</Link>
               )}
-              {/* Полоска (Underline) */}
               <span
                 className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${underlineColor}
                 ${activeItem === item.label ? "w-full" : "w-0 group-hover:w-full"}
@@ -125,20 +119,20 @@ function Header() {
       </nav>
 
       <div className="flex gap-2">
-        <a
-          href="#"
+        <Link
+          to="/cart"
           className="flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all"
         >
           <ShoppingCart className="w-6 h-6" />
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/favorites"
           className="flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all"
         >
           <Heart className="w-6 h-6" />
-        </a>
+        </Link>
         <a
-          href="#"
+          href="tel:+79053427061"
           className="flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all"
         >
           <Phone className="w-6 h-6" />

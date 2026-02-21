@@ -10,29 +10,8 @@ function Block4() {
     slidesToScroll: 1,
   });
 
-  const api = [
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40", "42 -nh", "44 -nh", "48-nh", "50", "52-nh", "54-nh"],
-      have: 3,
-      img: "/card-img.png",
-    },
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40", "42", "44", "48", "50 -nh", "52", "54"],
-      have: 5,
-      img: "/card-img.png",
-    },
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40 -nh", "42", "44", "48", "50 -nh", "52", "54"],
-      have: 2,
-      img: "/card-img.png",
-    },
-  ];
+  const hitsIds = [7, 8, 9];
+  const hitsHave = [3, 5, 2];
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -52,14 +31,14 @@ function Block4() {
         <div className="flex flex-col items-center gap-8">
           <div className="overflow-hidden w-full" ref={emblaRef}>
             <div className="flex gap-6 -ml-6">
-              {api.map((item, index) => (
-                <div key={index} className="pl-6 shrink-0 basis-1/2">
+              {hitsIds.map((id, index) => (
+                <div key={id} className="pl-6 shrink-0 basis-1/2">
                   <div className="relative">
                     <div className="absolute top-4.25 right-21.75 w-6 h-5.5 rotate-12 -z-10 bg-[#D9B46C]"></div>
-                    <Card data={item} />
+                    <Card id={id} />
 
                     <div className="absolute top-5 right-21 tracking-[-5%] leading-[120%] font-[Inter] bg-[#D9B46C] text-white pl-4.75 pr-3.25 py-2.75 text-[26px] font-medium shadow-2xl">
-                      Осталось {item.have} товара
+                      Осталось {hitsHave[index]} товара
                     </div>
                   </div>
                 </div>
@@ -70,7 +49,7 @@ function Block4() {
           <div className="flex gap-4 mt-13">
             <button
               onClick={scrollPrev}
-              className="bg-teal-dark hover:bg-teal-light rounded-[20px] py-5.5 px-6 shadow-lg transition-all"
+              className="bg-teal-dark hover:bg-teal-light rounded-[20px] py-5 px-5.5 shadow-lg transition-all"
             >
               <MoveLeft className="w-6 h-6 text-white" />
             </button>

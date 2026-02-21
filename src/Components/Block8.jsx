@@ -2,7 +2,7 @@ import React from "react";
 
 function Block8() {
   return (
-    <div className="flex gap-24 px-14 py-10">
+    <div data-bg="white" className="flex gap-24 px-14 py-10">
       <div className="flex flex-col gap-10 w-138.25">
         <h2 className="text-teal-dark text-[43px] font-semibold leading-[130%] tracking-[0.02em] uppercase">
           Оптовая заявка

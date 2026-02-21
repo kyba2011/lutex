@@ -11,9 +11,7 @@ function Footer() {
     e.preventDefault();
 
     if (location.pathname !== "/") {
-      // Если не на главной странице, сначала переходим на главную
       navigate("/");
-      // Ждем немного, чтобы страница загрузилась, затем скроллим
       setTimeout(() => {
         const element = document.getElementById("catalog");
         if (element) {
@@ -21,7 +19,6 @@ function Footer() {
         }
       }, 100);
     } else {
-      // Если уже на главной, просто скроллим
       const element = document.getElementById("catalog");
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });

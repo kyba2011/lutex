@@ -2,7 +2,7 @@ import "./Block7.css";
 
 function Block7() {
   return (
-    <div className="block7">
+    <div data-bg="white" className="block7">
       <div className="divh">
         <h1>ДОКУМЕНТЫ, ПОДТВЕРЖДАЮЩИЕ КАЧЕСТВО</h1>
       </div>

@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { MoveLeft, MoveRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Card from "./card";
@@ -10,43 +10,23 @@ function Block6() {
     slidesToScroll: 1,
   });
 
-  const api = [
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40", "42 -nh", "44 -nh", "48-nh", "50", "52-nh", "54-nh"],
-      have: 3,
-      img: "/card-img.png",
-    },
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40", "42", "44", "48", "50 -nh", "52", "54"],
-      have: 5,
-      img: "/card-img.png",
-    },
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40 -nh", "42", "44", "48", "50 -nh", "52", "54"],
-      have: 2,
-      img: "/card-img.png",
-    },
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40", "42", "44", "48", "50", "52", "54"],
-      have: 4,
-      img: "/card-img.png",
-    },
-    {
-      name: "poplin",
-      name2: "zima",
-      visit: ["40", "42 -nh", "44", "48", "50", "52 -nh", "54"],
-      have: 6,
-      img: "/card-img.png",
-    },
-  ];
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const newIds = [13, 14, 15, 16, 17];
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -63,24 +43,26 @@ function Block6() {
         <div className="flex gap-4">
           <button
             onClick={scrollPrev}
-            className="bg-teal-dark hover:bg-teal-light rounded-[20px] w-14 h-14 flex items-center justify-center shadow-lg transition-all"
+            disabled={!canScrollPrev}
+            className="bg-teal-dark hover:bg-teal-light rounded-[20px] py-5 px-5.5 shadow-lg transition-all disabled:opacity-80 disabled:cursor-not-allowed"
           >
             <MoveLeft className="w-6 h-6 text-white" />
           </button>
 
           <button
             onClick={scrollNext}
-            className="bg-teal-dark hover:bg-teal-light rounded-[20px] w-14 h-14 flex items-center justify-center shadow-lg transition-all"
+            disabled={!canScrollNext}
+            className="bg-teal-dark hover:bg-teal-light rounded-[20px] py-5 px-5.5 shadow-lg transition-all disabled:opacity-80 disabled:cursor-not-allowed"
           >
             <MoveRight className="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
       <div className="overflow-hidden flex-1" ref={emblaRef}>
-        <div className="flex gap-6">
-          {api.map((item, index) => (
-            <div key={index} className="shrink-0 w-[calc(33.333%-16px)]">
-              <Card data={item} />
+        <div className="flex gap-6 pr-14">
+          {newIds.map((id) => (
+            <div key={id} className="shrink-0 w-[calc(33.333%-16px)]">
+              <Card id={id} />
             </div>
           ))}
         </div>
