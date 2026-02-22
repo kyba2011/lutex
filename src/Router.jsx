@@ -5,6 +5,7 @@ import Sale from "./Components/BLock-sale/Sale";
 import ProductDetail from "./Components/ProductDetail";
 import Cart from "./Components/Cart";
 import Favorites from "./Components/Favorites";
+import Contacts from "./Components/Contacts/Contacts";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "favorites",
         element: <Favorites />,
+      },
+      {
+        path: "contacts",
+        element: <Contacts />,
       },
     ],
   },
