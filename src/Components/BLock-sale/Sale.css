@@ -40,7 +40,7 @@
 
     .breadcrumb-home-group:hover .breadcrumb-link,
     .breadcrumb-home-group:hover .breadcrumb-separator {
-      color: #10545B;
+      color: var(--color-teal-light);
     }
   }
 }

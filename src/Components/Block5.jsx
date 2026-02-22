@@ -46,8 +46,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Халаты")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Халаты"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Халаты
@@ -56,8 +56,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Сорочки")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Сорочки"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Сорочки
@@ -66,8 +66,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Пижамы")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Пижамы"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Пижамы
@@ -78,8 +78,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Туники")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Туники"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Туники
@@ -88,8 +88,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Толстовки")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Толстовки"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Толстовки
@@ -98,8 +98,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Спортивные костюмы")}
                 className={`cursor-pointer transition-colors whitespace-nowrap ${
                   selectedCategory === "Спортивные костюмы"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Спортивные костюмы

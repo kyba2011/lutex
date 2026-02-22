@@ -35,9 +35,7 @@ function Block3() {
             key={material}
             onClick={() => handleMaterialClick(material)}
             className={`cursor-pointer transition-colors ${
-              selectedMaterial === material
-                ? "text-[#D9B46C]"
-                : "hover:text-[#D9B46C]"
+              selectedMaterial === material ? "text-gold" : "hover:text-gold"
             }`}
           >
             - {material}

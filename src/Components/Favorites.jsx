@@ -29,7 +29,7 @@ function Favorites() {
       {favoriteIds.length === 0 ? (
         <div className="text-center py-20">
           <h2 className="text-2xl text-teal-light mb-4">Избранное пусто</h2>
-          <Link to="/" className="text-[#D9B46C] underline">
+          <Link to="/" className="text-gold underline">
             Перейти к покупкам
           </Link>
         </div>

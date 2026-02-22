@@ -12,7 +12,7 @@ function Header() {
     { label: "ГЛАВНАЯ", path: "/" },
     { label: "КАТАЛОГ", path: "/", scrollTo: "catalog" },
     { label: "РАСПРОДАЖА", path: "/sale" },
-    { label: "ОТЗЫВЫ", path: "/reviews" },
+    { label: "ОТЗЫВЫ", path: "/", scrollTo: "rewiews" },
     { label: "КОНТАКТЫ", path: "/contacts" },
   ];
 
@@ -83,8 +83,8 @@ function Header() {
     }
   }, [location.pathname]);
 
-  const textColor = isDarkSection ? "text-white" : "text-[#10545B]";
-  const underlineColor = "bg-[#D9B46C]";
+  const textColor = isDarkSection ? "text-white" : "text-teal-light";
+  const underlineColor = "bg-gold";
 
   return (
     <header
@@ -121,19 +121,19 @@ function Header() {
       <div className="flex gap-2">
         <Link
           to="/cart"
-          className="flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all"
+          className="flex w-12 h-12 border border-gold text-gold items-center justify-center rounded-xl hover:bg-gold hover:text-white transition-all"
         >
           <ShoppingCart className="w-6 h-6" />
         </Link>
         <Link
           to="/favorites"
-          className="flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all"
+          className="flex w-12 h-12 border border-gold text-gold items-center justify-center rounded-xl hover:bg-gold hover:text-white transition-all"
         >
           <Heart className="w-6 h-6" />
         </Link>
         <a
           href="tel:+79053427061"
-          className="flex w-12 h-12 border border-[#D9B46C] text-[#D9B46C] items-center justify-center rounded-xl hover:bg-[#D9B46C] hover:text-white transition-all"
+          className="flex w-12 h-12 border border-gold text-gold items-center justify-center rounded-xl hover:bg-gold hover:text-white transition-all"
         >
           <Phone className="w-6 h-6" />
         </a>

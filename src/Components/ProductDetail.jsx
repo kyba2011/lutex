@@ -41,7 +41,7 @@ function ProductDetail() {
     return (
       <div className="max-w-360 mx-auto pt-32 pb-12 px-20 text-center">
         <h1 className="text-2xl text-teal-light">Товар не найден</h1>
-        <Link to="/" className="text-[#D9B46C] underline mt-4 inline-block">
+        <Link to="/" className="text-gold underline mt-4 inline-block">
           Вернуться на главную
         </Link>
       </div>
@@ -155,10 +155,10 @@ function ProductDetail() {
           </div>
 
           <div className="flex gap-5">
-            <button className="bg-[#D9B46C] text-white text-lg leading-tight tracking-wider py-5 px-21 rounded-md hover:bg-[#c6a05d] transition-all font-normal">
+            <button className="bg-gold text-white text-lg leading-tight tracking-wider py-5 px-21 rounded-md hover:bg-gold-dark transition-all font-normal">
               В корзину
             </button>
-            <button className="bg-[#F6FDFD] text-[#D9B46C] text-lg font-semibold leading-tight py-5 px-14 rounded-md border border-[#D9B46C] hover:bg-[#D9B46C] hover:text-white transition-all">
+            <button className="bg-light-blue text-gold text-lg font-semibold leading-tight py-5 px-14 rounded-md border border-gold hover:bg-gold hover:text-white transition-all">
               В избранное
             </button>
           </div>

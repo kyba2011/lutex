@@ -64,7 +64,7 @@ function Card({ id }) {
 
   return (
     <Link to={generateUrl()}>
-      <div className="max-w-85 xl:max-w-90 2xl:max-w-102.5 w-full rounded-[10px] pb-2 p-px text-[#3E3232] bg-white h-91.2 5">
+      <div className="max-w-85 xl:max-w-90 2xl:max-w-102.5 w-full rounded-[10px] pb-2 p-px text-gray-dark bg-white h-91.2 5">
         <img
           data-bg="dark"
           src={img}
@@ -78,7 +78,7 @@ function Card({ id }) {
           <h3 className="text-[22px] font-bold">{data.name}</h3>
           <p className="text-[16px] font-normal">{data.name2}</p>
         </div>
-        <div className="flex justify-between items-center bg-[#F5F5F5] py-2.75 px-4 mx-1 rounded-xl">
+        <div className="flex justify-between items-center bg-gray-light py-2.75 px-4 mx-1 rounded-xl">
           <div className="flex justify-start items-center gap-3.5">
             {data.visit.map((item, index) => {
               const hasNotHave = String(item).includes("-nh");
@@ -88,7 +88,7 @@ function Card({ id }) {
                 <p
                   key={index}
                   className={`text-sm ${
-                    hasNotHave ? "text-[#939393]" : "text-[#3E3232]"
+                    hasNotHave ? "text-gray-medium" : "text-gray-dark"
                   }`}
                 >
                   {displayText}
@@ -100,16 +100,14 @@ function Card({ id }) {
             <button onClick={handleFavoriteClick}>
               <Heart
                 className={`w-4.5 h-4.5 transition-all ${
-                  inFavorites
-                    ? "fill-[#D9B46C] text-[#D9B46C]"
-                    : "text-[#D9B46C]"
+                  inFavorites ? "fill-gold text-gold" : "text-gold"
                 }`}
               />
             </button>
             <button onClick={handleCartClick}>
               <ShoppingCart
                 className={`w-4.5 h-4.5 transition-all ${
-                  inCart ? "fill-[#D9B46C] text-[#D9B46C]" : "text-[#D9B46C]"
+                  inCart ? "fill-gold text-gold" : "text-gold"
                 }`}
               />
             </button>

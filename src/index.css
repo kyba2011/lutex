@@ -1,12 +1,20 @@
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-
 @import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 @import "tailwindcss";
 
 @theme {
   --color-teal-dark: #0B5158;
   --color-teal-light: #10545B;
+  --color-gold: #D9B46C;
+  --color-gold-dark: #c6a05d;
+  --color-beige: #F9F5F0;
+  --color-gray-light: #F5F5F5;
+  --color-gray-dark: #3E3232;
+  --color-gray-medium: #939393;
+  --color-dark: #212121;
+  --color-yellow: #FFC300;
+  --color-light-blue: #F6FDFD;
 }
 
 * {
