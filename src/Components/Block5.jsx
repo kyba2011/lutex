@@ -30,9 +30,9 @@ function Block5() {
   return (
     <div
       data-bg="white"
-      className="w-full max-w-360 mx-auto py-12 lg:py-16 mt-16 lg:mt-20 xl:mt-25"
+      className="w-full max-w-7xl mx-auto mt-16 lg:mt-20 xl:mt-25"
     >
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 px-8 lg:px-12 xl:px-20">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 px-12 lg:px-14 xl:px-17.5">
         <div className="flex-1 max-w-100">
           <h2 className="text-3xl lg:text-4xl xl:text-[42px] font-semibold text-teal-light leading-[130%] tracking-[2%]">
             ЛЮБИМЫЙ ТРИКОТАЖ
@@ -46,8 +46,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Халаты")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Халаты"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Халаты
@@ -56,8 +56,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Сорочки")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Сорочки"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Сорочки
@@ -66,8 +66,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Пижамы")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Пижамы"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Пижамы
@@ -78,8 +78,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Туники")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Туники"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Туники
@@ -88,8 +88,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Толстовки")}
                 className={`cursor-pointer transition-colors ${
                   selectedCategory === "Толстовки"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Толстовки
@@ -98,8 +98,8 @@ function Block5() {
                 onClick={() => handleCategoryClick("Спортивные костюмы")}
                 className={`cursor-pointer transition-colors whitespace-nowrap ${
                   selectedCategory === "Спортивные костюмы"
-                    ? "text-[#D9B46C]"
-                    : "hover:text-[#D9B46C]"
+                    ? "text-gold"
+                    : "hover:text-gold"
                 }`}
               >
                 — Спортивные костюмы
@@ -110,16 +110,16 @@ function Block5() {
         </div>
         <img
           src="/block5.png"
-          className="w-full lg:w-auto lg:flex-1 lg:max-w-150 xl:max-w-175 h-auto object-cover"
+          className="w-full lg:w-auto lg:flex-1 lg:max-w-150 xl:max-w-175 h-auto rounded-[10px] object-cover"
           alt=""
         />
       </div>
 
-      <div className="flex justify-center py-12 lg:py-16 px-4 lg:px-8 xl:px-20">
-        <div className="flex flex-wrap gap-4 lg:gap-5 xl:gap-6 justify-center lg:justify-start max-w-full">
+      <div className="flex w-full justify-center py-12 lg:py-16 ">
+        <div className="flex flex-wrap mx-auto gap-4 lg:gap-5 xl:gap-6 w-full max-w-[1130px] ">
           {filteredIds.map((id) => (
             <Card key={id} id={id} />
-          ))}
+          ))} 
         </div>
       </div>
     </div>

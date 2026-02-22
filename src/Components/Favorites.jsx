@@ -7,29 +7,18 @@ function Favorites() {
 
   return (
     <div data-bg="white" className="max-w-360 mx-auto pt-32 pb-12 px-20">
-      <ul className="flex items-center gap-2 mb-12 text-base">
-        <li className="flex items-center gap-2 group cursor-pointer">
-          <Link
-            to="/"
-            className="transition-colors duration-300 group-hover:text-teal-light"
-            style={{ color: "rgba(34, 83, 120, 0.6)" }}
-          >
-            Главная
-          </Link>
-          <span
-            className="transition-colors duration-300 group-hover:text-teal-light"
-            style={{ color: "rgba(34, 83, 120, 0.6)" }}
-          >
-            /
-          </span>
+      <ul className="flex gap-1 leading-[130%] text-[16px] text-[#22537899] hover:text-teal-light font-[Inter] mb-12.5">
+        <li>
+          <Link to="/">Главная</Link>
         </li>
-        <li className="text-teal-light">Избранное</li>
+        <li className="text-[18px]">/</li>
+        <li style={{ color: "#10545B" }}>Избранное</li>
       </ul>
 
       {favoriteIds.length === 0 ? (
         <div className="text-center py-20">
           <h2 className="text-2xl text-teal-light mb-4">Избранное пусто</h2>
-          <Link to="/" className="text-[#D9B46C] underline">
+          <Link to="/" className="text-gold underline">
             Перейти к покупкам
           </Link>
         </div>

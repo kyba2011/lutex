@@ -34,10 +34,10 @@ function Block4() {
               {hitsIds.map((id, index) => (
                 <div key={id} className="pl-6 shrink-0 basis-1/2">
                   <div className="relative">
-                    <div className="absolute top-4.25 right-21.75 w-6 h-5.5 rotate-12 -z-10 bg-[#D9B46C]"></div>
+                    <div className="absolute top-4.25 right-21.75 w-6 h-5.5 rotate-12 -z-10 bg-gold"></div>
                     <Card id={id} />
 
-                    <div className="absolute top-5 right-21 tracking-[-5%] leading-[120%] font-[Inter] bg-[#D9B46C] text-white pl-4.75 pr-3.25 py-2.75 text-[26px] font-medium shadow-2xl">
+                    <div className="absolute top-5 right-21 tracking-[-5%] leading-[120%] font-[Inter] bg-gold text-white pl-4.75 pr-3.25 py-2.75 text-[26px] font-medium shadow-2xl">
                       Осталось {hitsHave[index]} товара
                     </div>
                   </div>

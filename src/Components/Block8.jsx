@@ -16,27 +16,27 @@ function Block8() {
       <div className="flex flex-col gap-12 w-157.5">
         <div className="flex flex-col gap-7">
           <div className="flex flex-col gap-5">
-            <div className="flex font-[Inter] items-center gap-5 px-4 py-3.5 border border-[#D9B46C] rounded-[14px]">
+            <div className="flex font-[Inter] items-center gap-5 px-4 py-3.5 border border-gold rounded-[14px]">
               <input
                 type="text"
                 placeholder="ИМЯ"
-                className="flex-1 bg-transparent text-[#D9B46C] text-base font-medium uppercase tracking-[0.00625em] leading-[137.5%] outline-none placeholder:text-[#D9B46C]"
+                className="flex-1 bg-transparent text-gold text-base font-medium uppercase tracking-[0.00625em] leading-[137.5%] outline-none placeholder:text-gold"
               />
             </div>
 
-            <div className="flex font-[Inter] items-center gap-5 px-4 py-3.5 border border-[#D9B46C] rounded-[14px]">
+            <div className="flex font-[Inter] items-center gap-5 px-4 py-3.5 border border-gold rounded-[14px]">
               <input
                 type="tel"
                 placeholder="ТЕЛЕФОН"
-                className="flex-1 bg-transparent text-[#D9B46C] text-base font-medium uppercase tracking-[0.00625em] leading-[137.5%] outline-none placeholder:text-[#D9B46C]"
+                className="flex-1 bg-transparent text-gold text-base font-medium uppercase tracking-[0.00625em] leading-[137.5%] outline-none placeholder:text-gold"
               />
             </div>
 
-            <div className="flex font-[Inter] items-center gap-5 px-4 py-3.5 border border-[#D9B46C] rounded-[14px]">
+            <div className="flex font-[Inter] items-center gap-5 px-4 py-3.5 border border-gold rounded-[14px]">
               <input
                 type="text"
                 placeholder="КОММЕНТАРИЙ"
-                className="flex-1 bg-transparent \ text-[#D9B46C] text-base font-medium uppercase tracking-[0.00625em] leading-[137.5%] outline-none placeholder:text-[#D9B46C]"
+                className="flex-1 bg-transparent \ text-gold text-base font-medium uppercase tracking-[0.00625em] leading-[137.5%] outline-none placeholder:text-gold"
               />
             </div>
           </div>

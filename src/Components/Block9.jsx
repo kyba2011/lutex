@@ -43,9 +43,10 @@ function Block9() {
   return (
     <section
       className="w-full max-w-[1440px] mx-auto px-20 py-24"
-      data-bg="light"
+      data-bg="white"
+      id="rewiews"
     >
-      <h2 className="text-[43px] font-semibold text-[#10545B] uppercase tracking-wider text-center mb-12">
+      <h2 className="text-[43px] font-semibold text-teal-light uppercase tracking-wider text-center mb-12">
         Отзывы
       </h2>
 
@@ -59,23 +60,18 @@ function Block9() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-[#F9F5F0] rounded-[10px] p-8 flex flex-col gap-8 flex-shrink-0"
+              className="bg-beige rounded-[10px] p-8 flex flex-col gap-8 shrink-0"
               style={{ width: "413px", height: "420px" }}
             >
               <div className="flex flex-col gap-2.5">
-                <h3 className="text-xl font-bold text-[#212121]">
-                  {review.name}
-                </h3>
+                <h3 className="text-xl font-bold text-dark">{review.name}</h3>
                 <div className="flex gap-1.5">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-6 h-6 fill-[#FFC300] text-[#FFC300]"
-                    />
+                    <Star key={i} className="w-6 h-6 fill-yellow text-yellow" />
                   ))}
                 </div>
               </div>
-              <p className="text-lg font-medium text-[#212121] leading-relaxed">
+              <p className="text-lg font-medium text-dark leading-relaxed">
                 {review.text}
               </p>
             </div>
@@ -87,7 +83,7 @@ function Block9() {
         <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
-          className="w-14 h-14 bg-[#10545B] rounded-xl flex items-center justify-center hover:bg-[#0B5158] transition-colors disabled:opacity-80 disabled:cursor-not-allowed"
+          className="w-14 h-14 bg-teal-light rounded-xl flex items-center justify-center hover:bg-teal-dark transition-colors disabled:opacity-80 disabled:cursor-not-allowed"
           aria-label="Предыдущий отзыв"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
@@ -95,7 +91,7 @@ function Block9() {
         <button
           onClick={handleNext}
           disabled={currentIndex >= reviews.length - 3}
-          className="w-14 h-14 bg-[#10545B] rounded-xl flex items-center justify-center hover:bg-[#0B5158] transition-colors disabled:opacity-80 disabled:cursor-not-allowed"
+          className="w-14 h-14 bg-teal-light rounded-xl flex items-center justify-center hover:bg-teal-dark transition-colors disabled:opacity-80 disabled:cursor-not-allowed"
           aria-label="Следующий отзыв"
         >
           <ChevronRight className="w-6 h-6 text-white" />

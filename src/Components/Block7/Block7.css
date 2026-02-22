@@ -7,13 +7,14 @@
 
   .divh {
     h1 {
-      color: #10545b;
+      color: var(--color-teal-light);
       font-size: 36px;
       margin-top: 50px;
       margin-bottom: 80px;
       font-weight: 500;
     }
   }
+
   .divimg {
     display: flex;
     gap: 20px;

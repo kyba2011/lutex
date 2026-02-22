@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProductById } from "../data/products";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 
 function ProductDetail() {
   const { name: urlName } = useParams();
@@ -41,7 +43,7 @@ function ProductDetail() {
     return (
       <div className="max-w-360 mx-auto pt-32 pb-12 px-20 text-center">
         <h1 className="text-2xl text-teal-light">Товар не найден</h1>
-        <Link to="/" className="text-[#D9B46C] underline mt-4 inline-block">
+        <Link to="/" className="text-gold underline mt-4 inline-block">
           Вернуться на главную
         </Link>
       </div>
@@ -64,23 +66,12 @@ function ProductDetail() {
 
   return (
     <div data-bg="white" className="max-w-360 mx-auto pt-32 pb-12 px-20">
-      <ul className="flex items-center gap-2 mb-12 text-base">
-        <li className="flex items-center gap-2 group cursor-pointer">
-          <Link
-            to="/"
-            className="transition-colors duration-300 group-hover:text-teal-light"
-            style={{ color: "rgba(34, 83, 120, 0.6)" }}
-          >
-            Главная
-          </Link>
-          <span
-            className="transition-colors duration-300 group-hover:text-teal-light"
-            style={{ color: "rgba(34, 83, 120, 0.6)" }}
-          >
-            /
-          </span>
+      <ul className="flex gap-1 leading-[130%] text-[16px] text-[#22537899] hover:text-teal-light font-[Inter] mb-12.5">
+        <li>
+          <Link to="/">Главная</Link>
         </li>
-        <li className="text-teal-light">
+        <li className="text-[18px]">/</li>
+        <li style={{ color: "#10545B" }}>
           {product.name} {product.name2}
         </li>
       </ul>
@@ -94,15 +85,15 @@ function ProductDetail() {
           />
           <button
             onClick={handlePrevImage}
-            className="absolute left-5 top-1/2 -translate-y-1/2 w-7 h-7 border-4 border-white text-white bg-transparent flex items-center justify-center text-lg transition-all"
+            className="absolute left-5 top-1/2 -translate-y-1/2 w-8 h-8 text-white bg-transparent flex items-center justify-center text-lg transition-all"
           >
-            ←
+            <FaArrowLeft />
           </button>
           <button
             onClick={handleNextImage}
-            className="absolute right-5 top-1/2 -translate-y-1/2 w-7 h-7 border-4 border-white text-white bg-transparent flex items-center justify-center text-lg transition-all"
+            className="absolute right-5 top-1/2 -translate-y-1/2 w-8 h-8 text-white bg-transparent flex items-center justify-center text-lg transition-all"
           >
-            →
+            <FaArrowRight />
           </button>
         </div>
 
@@ -155,10 +146,10 @@ function ProductDetail() {
           </div>
 
           <div className="flex gap-5">
-            <button className="bg-[#D9B46C] text-white text-lg leading-tight tracking-wider py-5 px-21 rounded-md hover:bg-[#c6a05d] transition-all font-normal">
+            <button className="bg-gold text-white text-lg leading-tight tracking-wider py-5 px-21 rounded-md hover:bg-gold-dark transition-all font-normal">
               В корзину
             </button>
-            <button className="bg-[#F6FDFD] text-[#D9B46C] text-lg font-semibold leading-tight py-5 px-14 rounded-md border border-[#D9B46C] hover:bg-[#D9B46C] hover:text-white transition-all">
+            <button className="bg-light-blue text-gold text-lg font-semibold leading-tight py-5 px-14 rounded-md border border-gold hover:bg-gold hover:text-white transition-all">
               В избранное
             </button>
           </div>

@@ -24,7 +24,7 @@ function Hero() {
               href=""
               className="absolute flex w-12.5 h-12.5 pt-0.5 rounded-full bg-teal-dark justify-center items-center bottom-7.5 right-7.5"
             >
-              <IoIosArrowRoundBack className="w-7.5 h-7.5 text-[#D9B46C] z-10 -rotate-135" />
+              <IoIosArrowRoundBack className="w-7.5 h-7.5 text-gold z-10 -rotate-135" />
             </a>
           </div>
           <div className="relative bg-white flex items-center rounded-[10px] justify-between max-w-157.5 w-full h-50 p-7.5 pr-26">
@@ -34,7 +34,7 @@ function Hero() {
               href=""
               className="absolute flex w-12.5 h-12.5 pt-0.5 rounded-full bg-teal-dark justify-center items-center bottom-7.5 right-7.5"
             >
-              <IoIosArrowRoundBack className="w-7.5 h-7.5 text-[#D9B46C] z-10 -rotate-135" />
+              <IoIosArrowRoundBack className="w-7.5 h-7.5 text-gold z-10 -rotate-135" />
             </a>
           </div>
         </div>

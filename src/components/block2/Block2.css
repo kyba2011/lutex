@@ -12,7 +12,7 @@
 
   .dh1p {
     margin-left: 160px;
-    color: #3d352d;
+    color: var(--color-gray-dark);
 
     h1 {
       font-family: "Manrope";

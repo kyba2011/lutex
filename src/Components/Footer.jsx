@@ -28,7 +28,7 @@ function Footer() {
 
   return (
     <div className="bg-teal-light text-white pt-10 lg:pt-12.5 pb-5 px-4 lg:px-8 xl:px-20 flex flex-col lg:flex-row w-full max-w-[1440px] mx-auto gap-8 lg:gap-0 min-h-[300px] lg:h-75">
-      <div className="flex flex-col justify-between text-[#D9B46C] ">
+      <div className="flex flex-col justify-between text-gold ">
         <img src="/logo.svg" alt="" className="w-44" />
         <p className="text-[14px] w-56">Политика конфиденциальности</p>
       </div>
@@ -63,8 +63,8 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="flex flex-col items-start lg:items-end justify-between text-[#D9B46C] lg:ml-auto gap-4">
-        <p className="border-[1.5px] border-[#D9B46C] py-2.5 px-5 rounded-full font-semibold text-[20px]">
+      <div className="flex flex-col items-start lg:items-end justify-between text-gold lg:ml-auto gap-4">
+        <p className="border-[1.5px] border-gold py-2.5 px-5 rounded-full font-semibold text-[20px]">
           +7 905 342-70-61
         </p>
         <p className="text-[14px]">Пользовательское соглашение</p>

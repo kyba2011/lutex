@@ -24,7 +24,7 @@ function Block3() {
     <div
       id="catalog"
       data-bg="white"
-      className="w-full max-w-360 mx-auto py-12 lg:py-16"
+      className="w-full max-w-360"
     >
       <h1 className="text-3xl lg:text-4xl xl:text-5xl text-teal-light font-semibold text-center mb-8 lg:mb-10 px-4">
         УЮТНАЯ СПАЛЬНЯ
@@ -35,19 +35,17 @@ function Block3() {
             key={material}
             onClick={() => handleMaterialClick(material)}
             className={`cursor-pointer transition-colors ${
-              selectedMaterial === material
-                ? "text-[#D9B46C]"
-                : "hover:text-[#D9B46C]"
+              selectedMaterial === material ? "text-gold" : "hover:text-gold"
             }`}
           >
             - {material}
           </p>
-        ))}
+        ))} 
       </div>
-      <div className="flex justify-center py-12 lg:py-16 px-4 lg:px-8 xl:px-20">
+      <div className="flex w-full justify-center py-12 lg:py-16 px-4 lg:px-8 xl:px-20">
         <div
-          data-bg="dark"
-          className="flex flex-wrap gap-4 lg:gap-5 xl:gap-6 justify-center lg:justify-start max-w-full"
+          
+          className="flex flex-wrap mx-auto gap-4 lg:gap-5 xl:gap-6 w-full max-w-[1130px] "
         >
           {filteredProducts.map((item) => (
             <Card key={item.id} id={item.id} />
