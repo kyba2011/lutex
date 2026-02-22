@@ -1,46 +1,16 @@
 .sale-grid {
-  margin: 10px auto;
+  margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 1280px;
+  max-width: 1130px;
+
   width: 100%;
+
 }
 
 .divul {
   margin-top: 120px;
   padding-inline: 80px;
-
-  ul {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    justify-content: start;
-    align-items: center;
-    font-size: 16px;
-
-    li {
-      .breadcrumb-home-group {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-      }
-
-      .breadcrumb-link {
-        color: rgba(34, 83, 120, 0.6);
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-
-      .breadcrumb-separator {
-        color: rgba(34, 83, 120, 0.6);
-        transition: color 0.3s;
-      }
-    }
-
-    .breadcrumb-home-group:hover .breadcrumb-link,
-    .breadcrumb-home-group:hover .breadcrumb-separator {
-      color: var(--color-teal-light);
-    }
-  }
+  
 }

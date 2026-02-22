@@ -64,7 +64,7 @@ function Card({ id }) {
 
   return (
     <Link to={generateUrl()}>
-      <div className="max-w-85 xl:max-w-90 2xl:max-w-102.5 w-full rounded-[10px] pb-2 p-px text-gray-dark bg-white h-91.2 5">
+      <div className="max-w-85 xl:max-w-90  w-full rounded-[10px] pb-2 p-px text-gray-dark bg-white h-91.2 5">
         <img
           data-bg="dark"
           src={img}
